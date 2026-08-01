@@ -29,4 +29,17 @@ class Candidate {
     getSkill(skillName) {
         return this.skills.find(skill => skill.name === skillName);
     }
+
+    matchRequirement(requirement) {
+        const skill = this.getSkill(requirement.skillName);
+        if (!skill) {
+            return false;
+        }
+        return compareLevels(skill.experienceLevel(), requirement.minExperienceLevel) >= 0;
+    }
+}
+
+function compareLevels(levelA, levelB) {
+    const levels = ["Iniciante", "Intermediário", "Avançado", "Expert"];
+    return levels.indexOf(levelA) - levels.indexOf(levelB);
 }
