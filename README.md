@@ -6,8 +6,8 @@
 ### Skill
 A entidade Habilidade é composta por dois atributos carregados internamente pelo construtor:
 
-- Nome da Habilidade
-- Nível (da experiência)
+- Nome da Habilidade;
+- Nível (da experiência).
 
 Onde o nível da experiência daquela habilidade é contada em unidades de anos. Podendo ser um número fracionado.
 
@@ -18,3 +18,16 @@ Para as habilidades, a quantidade de anos na habilidade enquadra o candidato com
 - Avançado (até 5 anos)
 - Expert (mais que 5 anos)
 
+### Opportunity
+A entidade Vaga é composta por quatro atributos carregados internamente pelo construtor:
+
+- Empresa;
+- Cargo;
+- Habilidades;
+- Nível.
+
+#### RemoteOpportunity
+A entidade Vaga Remota herda de Vaga, e adiciona os seguintes atributos:
+
+- Remoto;
+- Timezone;
