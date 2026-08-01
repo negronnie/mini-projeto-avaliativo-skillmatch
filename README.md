@@ -31,3 +31,15 @@ A entidade Vaga Remota herda de Vaga, e adiciona os seguintes atributos:
 
 - Remoto;
 - Timezone;
+É feito a validação é feita dentro da classe Skill através do método _experienceLevel_
+
+### Candidate
+A entidade Candidato é composta por quatro artributos carregados internamente pelo construtor:
+
+- Nome;
+- Área de Interesse;
+- Habilidades;
+- Tempo de Experiência;
+
+Além disso, a classe possui dois métodos, um para obter a habilidade do candidato _(getSkill)_, e outra para verificar se o candidato atende à um requisito da vaga _(matchRequirement)_.
+
