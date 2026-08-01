@@ -17,3 +17,20 @@ class Skill {
         }
     }
 }
+
+class Opportunity {
+    constructor(company, role, skills, level) {
+        this.company = company;
+        this.role = role;
+        this.skills = skills;
+        this.level = level;
+    }
+}
+
+class RemoteOpportunity extends Opportunity {
+    constructor(company, role, skills, level, timezone) {
+        super(company, role, skills, level);
+        this.remote = true;
+        this.timezone = timezone;
+    }
+}
