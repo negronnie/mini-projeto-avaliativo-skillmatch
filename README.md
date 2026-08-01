@@ -1,0 +1,1 @@
+# Mini-Projeto Avaliativo [SCTEC Módulo 1, Semana 6] - Lucas Ponciano
