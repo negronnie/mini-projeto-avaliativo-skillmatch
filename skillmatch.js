@@ -17,3 +17,12 @@ class Skill {
         }
     }
 }
+
+class Candidate {
+    constructor(name, interestArea, skills = [], experience = 0) {
+        this.name = name;
+        this.interestArea = interestArea;
+        this.skills = skills;
+        this.experience = experience;
+    }
+}
