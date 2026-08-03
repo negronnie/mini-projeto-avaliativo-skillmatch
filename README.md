@@ -65,6 +65,13 @@ Foram instanciadas as classes do candidato e das três vagas disponíveis para a
 
 ## Critérios
 
+### 1 .Percentual de Compatibilidade
 Para a avaliação do percentual de compatibilidade, adotei a seguinte regra:
 
 `(requisitos atendidos / total de requisitos) * 100`
+
+### Habilidade faltante
+
+É considerado habilidade faltante aquela que **não existe** ou **não atende ao nível mínimo** exigido pela vaga.
+
+*Por exemplo:* Candidato possui a habilidade em **iniciante**, e a vaga exige **intermediário** -> O resultado é **não atende**, e isso impacta diretamente o cálculo da compatibilidade. 

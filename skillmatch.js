@@ -164,3 +164,33 @@ function classifyCompatibility(score) {
         return "Baixa compatibilidade";
     }
 }
+
+function listMissingSkills(candidate, opportunity) {
+    return opportunity.skills
+        .filter((requirement) => !candidate.matchRequirement(requirement))
+        .map((requirement) => {
+            const skill = candidate.getSkill(requirement.skillName);
+            if(!skill) {
+                return { 
+                    skillName: requirement.skillName, 
+                    minExperienceLevel: requirement.minExperienceLevel,
+                    reason: 'missing'
+                };
+            } else {
+                return { 
+                    skillName: requirement.skillName, 
+                    experienceLevel: skill.experienceLevel(), 
+                    minExperienceLevel: requirement.minExperienceLevel,
+                    reason: 'insufficient'
+                };
+            }
+        });
+}
+
+function showMissingSkill(item) {
+    if(item.reason === 'missing') {
+        return `Habilidade: ${item.skillName} - Habilidade Ausente`;
+    } else {
+        return `Habilidade: ${item.skillName} - Nível Insuficiente (Possui: ${item.experienceLevel}, Exige: ${item.minExperienceLevel})`;
+    }
+}
