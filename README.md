@@ -44,3 +44,6 @@ A entidade Vaga Remota herda de Vaga, e adiciona os seguintes atributos:
 - Timezone;
 É feito a validação é feita dentro da classe Skill através do método _experienceLevel_
 
+## Backfill
+
+Foram instanciadas as classes do candidato e das três vagas disponíveis para avaliação.

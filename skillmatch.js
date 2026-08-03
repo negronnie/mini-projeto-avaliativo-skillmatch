@@ -60,3 +60,91 @@ class RemoteOpportunity extends Opportunity {
         this.timezone = timezone;
     }
 }
+
+// data backfill
+const candidate = new Candidate(
+    'Lucas', 
+    'Fullstack', 
+    [
+        new Skill('JavaScript', 1),
+        new Skill('HTML', 3),
+        new Skill('CSS', 3),
+        new Skill('Git', 3),
+        new Skill('Lógica de Programação', 1),
+        new Skill('Java', 1),
+        new Skill('Spring Boot', 0.8),
+        new Skill('MySQL', 1),
+        new Skill('PostgreSQL', 0.7),
+        new Skill('REST APIs', 0.8),
+        new Skill('Flyway', 0.8),
+        new Skill('Docker', 1.4),
+        new Skill('Swagger', 0.6),
+        new Skill('YAML', 1.4),
+        new Skill('JUnit', 0.9),
+        new Skill('Mockito', 0.9),
+        new Skill('Hamcrest', 0.9),
+        new Skill('TestContainers', 0.8),
+        new Skill('RestAssured', 0.8),
+        new Skill('JaCoCo', 0.8),
+        new Skill('SonarQube', 1),
+        new Skill('Product Management', 1.8),
+        new Skill('Scrum', 1.8),
+        new Skill('Kanban', 1.8),
+        new Skill('UX-UI', 1.8),
+    ],
+    3
+)
+
+const opportunities = [
+    new Opportunity(
+        'Senai SC',
+        'Desenvolvedor Fullstack',
+        [
+            { skillName: 'JavaScript', minExperienceLevel: 'Iniciante' },
+            { skillName: 'HTML', minExperienceLevel: 'Intermediário' },
+            { skillName: 'CSS', minExperienceLevel: 'Intermediário' },
+            { skillName: 'Git', minExperienceLevel: 'Intermediário' },
+            { skillName: 'Lógica de Programação', minExperienceLevel: 'Intermediário' },
+            { skillName: 'Java', minExperienceLevel: 'Iniciante' },
+            { skillName: 'Spring Boot', minExperienceLevel: 'Iniciante' },
+            { skillName: 'MySQL', minExperienceLevel: 'Iniciante' },
+            { skillName: 'PostgreSQL', minExperienceLevel: 'Iniciante' }  
+        ],
+        'Júnior'
+    ),
+
+    new Opportunity(
+        'Nubank',
+        'Desenvolvedor React',
+        [
+            {skillName: 'JavaScript', minExperienceLevel: 'Iniciante'},
+            {skillName: 'React', minExperienceLevel: 'Iniciante'},
+            {skillName: 'HTML', minExperienceLevel: 'Intermediário'},
+            {skillName: 'CSS', minExperienceLevel: 'Intermediário'},
+            {skillName: 'JavaScript', minExperienceLevel: 'Iniciante'},
+            {skillName: 'JavaScript', minExperienceLevel: 'Iniciante'},
+        ],
+        'Júnior'
+    ),
+
+    new RemoteOpportunity(
+        'iFood',
+        'Desenvolvedor Backend',
+        [
+            {skillName: 'Java', minExperienceLevel: 'Avançado'},
+            {skillName: 'Spring Boot', minExperienceLevel: 'Intermediário'},
+            {skillName: 'MySQL', minExperienceLevel: 'Intermediário'},
+            {skillName: 'PostgreSQL', minExperienceLevel: 'Intermediário'},
+            {skillName: 'Docker', minExperienceLevel: 'Intermediário'},
+            {skillName: 'Kafka', minExperienceLevel: 'Intermediário'},
+            {skillName: 'AWS', minExperienceLevel: 'Intermediário'},
+            {skillName: 'OAuth2', minExperienceLevel: 'Intermediário'},
+            {skillName: 'JWT', minExperienceLevel: 'Intermediário'},
+            {skillName: 'Redis', minExperienceLevel: 'Intermediário'},
+            {skillName: 'Jenkins', minExperienceLevel: 'Intermediário'},
+            {skillName: 'Kubernetes', minExperienceLevel: 'Intermediário'},
+        ],
+        'Pleno',
+        'America/Sao_Paulo'
+    )
+]
