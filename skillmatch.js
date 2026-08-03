@@ -254,3 +254,11 @@ function retrievesOpportunities(opportunities) {
         }, 3000);
     });
 }
+
+function analysisCounter(){
+    let counter = 0;
+    return function contar() {
+        counter += 1;
+        return counter;
+    }
+}
