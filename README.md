@@ -1,5 +1,19 @@
-# Mini-Projeto Avaliativo [SCTEC Módulo 1, Semana 6] - Lucas Ponciano
+# Mini-Projeto Avaliativo - Lucas Ponciano
 
+Projeto Avaliativo do Módulo 1 do SCTEC, proposto na Semana 6 do curso.
+
+A proposta é a de um sistema que avalia as habilidades de um candidato perante pelo menos três vagas, retornar um score de compatibilidade, bem como sugestão de estudo para as habilidades faltantes e recomendar a vaga mais adequada para o perfil do candidato.
+
+Como forma de aplicar de forma mais concisa a programação orientada a objetos (transformar a habilidade em uma classe), eu optei por adicionar uma complexidade a mais, que é o tempo de experiência/nível de senioridade do candidato em cada habilidade.
+
+## Dados do Projeto
+
+- Link do Kanban: [Kanban do Github](https://github.com/users/negronnie/projects/1/views/1)
+- Link do Vídeo Explicativo: 
+
+#### Tech Stack
+- VS Code
+- Code Runner (extensão)
 
 ## Entidades
 
@@ -47,3 +61,10 @@ A entidade Vaga Remota herda de Vaga, e adiciona os seguintes atributos:
 ## Backfill
 
 Foram instanciadas as classes do candidato e das três vagas disponíveis para avaliação.
+
+
+## Critérios
+
+Para a avaliação do percentual de compatibilidade, adotei a seguinte regra:
+
+`(requisitos atendidos / total de requisitos) * 100`
