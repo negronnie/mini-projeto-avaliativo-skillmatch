@@ -75,3 +75,13 @@ Para a avaliação do percentual de compatibilidade, adotei a seguinte regra:
 É considerado habilidade faltante aquela que **não existe** ou **não atende ao nível mínimo** exigido pela vaga.
 
 *Por exemplo:* Candidato possui a habilidade em **iniciante**, e a vaga exige **intermediário** -> O resultado é **não atende**, e isso impacta diretamente o cálculo da compatibilidade. 
+
+### Vaga com maior Compatibilidade
+
+Recomenda ao usuário a vaga com maior percentual de compatibilidade.
+
+### Sugestão de estudo
+A sugestão de estudo é gerada apenas para a vaga com maior compatibilidade.
+
+A prioridade de sugestão é: **Habilidade Faltante > Nível Insuficiente**
+

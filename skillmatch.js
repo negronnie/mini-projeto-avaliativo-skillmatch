@@ -194,3 +194,24 @@ function showMissingSkill(item) {
         return `Habilidade: ${item.skillName} - Nível Insuficiente (Possui: ${item.experienceLevel}, Exige: ${item.minExperienceLevel})`;
     }
 }
+
+function buildResult(candidate, opportunities) {
+    return opportunities.map((opportunity) => {
+        const score = calculateMatchScore(candidate, opportunity);
+        return {
+            opportunity: opportunity,
+            score: score,
+            compatibility: classifyCompatibility(score),
+            missingSkills: listMissingSkills(candidate, opportunity)
+        }
+    })
+}
+
+function findBestOpportunities(results){
+    return results.reduce((best, current) => {
+        if(current.score > best.score) {
+            return current;
+        }
+        return best;
+    });
+}
