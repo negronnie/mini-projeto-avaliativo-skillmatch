@@ -17,7 +17,7 @@ Como forma de aplicar de forma mais concisa a programação orientada a objetos 
 
 ## Entidades
 
-### Skill
+### 1. Skill
 A entidade Habilidade é composta por dois atributos carregados internamente pelo construtor:
 
 - Nome da Habilidade;
@@ -32,7 +32,7 @@ Para as habilidades, a quantidade de anos na habilidade enquadra o candidato com
 - Avançado (até 5 anos)
 - Expert (mais que 5 anos)
  
-### Candidate
+### 2. Candidate
 A entidade Candidato é composta por quatro artributos carregados internamente pelo construtor:
 
 - Nome;
@@ -43,7 +43,7 @@ A entidade Candidato é composta por quatro artributos carregados internamente p
 Além disso, a classe possui dois métodos, um para obter a habilidade do candidato _(getSkill)_, e outra para verificar se o candidato atende à um requisito da vaga _(matchRequirement)_.
 
 
-### Opportunity
+### 3. Opportunity
 A entidade Vaga é composta por quatro atributos carregados internamente pelo construtor:
 
 - Empresa;
@@ -51,7 +51,7 @@ A entidade Vaga é composta por quatro atributos carregados internamente pelo co
 - Habilidades;
 - Nível.
 
-#### RemoteOpportunity
+### 4. RemoteOpportunity
 A entidade Vaga Remota herda de Vaga, e adiciona os seguintes atributos:
 
 - Remoto;
