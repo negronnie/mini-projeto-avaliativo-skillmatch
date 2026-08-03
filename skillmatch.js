@@ -236,3 +236,15 @@ function studySubjectsSuggestion(bestResult) {
     }
     return `Aprofunde-se em: ${prioritySubject.skillName}, que está em nível insuficiente (Possui: ${prioritySubject.experienceLevel}, Exige: ${prioritySubject.minExperienceLevel}).`;
 }
+
+function retrievesOpportunities(opportunities) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(!opportunities || opportunities.length === 0) {
+                reject("Nenhuma vaga encontrada.");
+            } else {
+                resolve(opportunities);
+            }
+        }, 3000);
+    });
+}
