@@ -215,3 +215,24 @@ function findBestOpportunities(results){
         return best;
     });
 }
+
+function studySubjectsSuggestion(bestResult) {
+    const missingSkills = bestResult.missingSkills;
+    if(missingSkills.length === 0) {
+        return "O candidato já atende a todos os requisitos da vaga mais adequada.";
+    }
+
+    let prioritySubject = missingSkills[0];
+
+    for(const item of missingSkills) {
+        if(item.reason === 'missing') {
+            prioritySubject = item;
+            break;
+        }
+    }
+
+    if (prioritySubject.reason === 'missing') {
+        return `Estude: ${prioritySubject.skillName}, que você ainda não conhece e.`;
+    }
+    return `Aprofunde-se em: ${prioritySubject.skillName}, que está em nível insuficiente (Possui: ${prioritySubject.experienceLevel}, Exige: ${prioritySubject.minExperienceLevel}).`;
+}
