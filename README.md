@@ -4,7 +4,7 @@ Projeto Avaliativo do Módulo 1 do SCTEC, proposto na Semana 6 do curso.
 
 A proposta é a de um sistema que avalia as habilidades de um candidato perante pelo menos três vagas, retornar um score de compatibilidade, bem como sugestão de estudo para as habilidades faltantes e recomendar a vaga mais adequada para o perfil do candidato.
 
-Como forma de aplicar de forma mais concisa a programação orientada a objetos (transformar a habilidade em uma classe), eu optei por adicionar uma complexidade a mais, que é o tempo de experiência/nível de senioridade do candidato em cada habilidade.
+Como forma de aplicar a programação orientada a objetos, eu optei por adicionar uma complexidade a mais, que é o tempo de experiência/nível de senioridade do candidato em cada habilidade (transformando o array simples de habilidade em uma classe instanciável).
 
 ## Dados do Projeto
 
@@ -65,7 +65,7 @@ Foram instanciadas as classes do candidato e das três vagas disponíveis para a
 
 ## Critérios
 
-### 1 .Percentual de Compatibilidade
+### Percentual de Compatibilidade
 Para a avaliação do percentual de compatibilidade, adotei a seguinte regra:
 
 `(requisitos atendidos / total de requisitos) * 100`
@@ -78,7 +78,7 @@ Para a avaliação do percentual de compatibilidade, adotei a seguinte regra:
 
 ### Vaga com maior Compatibilidade
 
-Recomenda ao usuário a vaga com maior percentual de compatibilidade.
+Recomenda ao usuário a vaga com **maior percentual** de compatibilidade.
 
 ### Sugestão de estudo
 A sugestão de estudo é gerada apenas para a vaga com maior compatibilidade.
