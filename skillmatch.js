@@ -148,3 +148,19 @@ const opportunities = [
         'America/Sao_Paulo'
     )
 ]
+
+function calculateMatchScore(candidate, opportunity) {
+    const matched = opportunity.skills.filter(requirement => candidate.matchRequirement(requirement));
+    const score = (matched.length / opportunity.skills.length) * 100;
+    return score;
+}
+
+function classifyCompatibility(score) {
+    if (score >= 80) {
+        return "Alta compatibilidade";
+    } else if (score >= 50) {
+        return "Média compatibilidade";
+    } else {
+        return "Baixa compatibilidade";
+    }
+}
