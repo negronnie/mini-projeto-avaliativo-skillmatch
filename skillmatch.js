@@ -237,6 +237,12 @@ function studySubjectsSuggestion(bestResult) {
     return `Aprofunde-se em: ${prioritySubject.skillName}, que está em nível insuficiente (Possui: ${prioritySubject.experienceLevel}, Exige: ${prioritySubject.minExperienceLevel}).`;
 }
 
+function processarVagas(results, callback) {
+    for (const result of results) {
+        callback(result);
+    }
+}
+
 function retrievesOpportunities(opportunities) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
