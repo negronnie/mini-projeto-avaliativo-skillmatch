@@ -164,3 +164,75 @@ function classifyCompatibility(score) {
         return "Baixa compatibilidade";
     }
 }
+
+function listMissingSkills(candidate, opportunity) {
+    return opportunity.skills
+        .filter((requirement) => !candidate.matchRequirement(requirement))
+        .map((requirement) => {
+            const skill = candidate.getSkill(requirement.skillName);
+            if(!skill) {
+                return { 
+                    skillName: requirement.skillName, 
+                    minExperienceLevel: requirement.minExperienceLevel,
+                    reason: 'missing'
+                };
+            } else {
+                return { 
+                    skillName: requirement.skillName, 
+                    experienceLevel: skill.experienceLevel(), 
+                    minExperienceLevel: requirement.minExperienceLevel,
+                    reason: 'insufficient'
+                };
+            }
+        });
+}
+
+function showMissingSkill(item) {
+    if(item.reason === 'missing') {
+        return `Habilidade: ${item.skillName} - Habilidade Ausente`;
+    } else {
+        return `Habilidade: ${item.skillName} - Nível Insuficiente (Possui: ${item.experienceLevel}, Exige: ${item.minExperienceLevel})`;
+    }
+}
+
+function buildResult(candidate, opportunities) {
+    return opportunities.map((opportunity) => {
+        const score = calculateMatchScore(candidate, opportunity);
+        return {
+            opportunity: opportunity,
+            score: score,
+            compatibility: classifyCompatibility(score),
+            missingSkills: listMissingSkills(candidate, opportunity)
+        }
+    })
+}
+
+function findBestOpportunities(results){
+    return results.reduce((best, current) => {
+        if(current.score > best.score) {
+            return current;
+        }
+        return best;
+    });
+}
+
+function studySubjectsSuggestion(bestResult) {
+    const missingSkills = bestResult.missingSkills;
+    if(missingSkills.length === 0) {
+        return "O candidato já atende a todos os requisitos da vaga mais adequada.";
+    }
+
+    let prioritySubject = missingSkills[0];
+
+    for(const item of missingSkills) {
+        if(item.reason === 'missing') {
+            prioritySubject = item;
+            break;
+        }
+    }
+
+    if (prioritySubject.reason === 'missing') {
+        return `Estude: ${prioritySubject.skillName}, que você ainda não conhece e.`;
+    }
+    return `Aprofunde-se em: ${prioritySubject.skillName}, que está em nível insuficiente (Possui: ${prioritySubject.experienceLevel}, Exige: ${prioritySubject.minExperienceLevel}).`;
+}
