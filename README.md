@@ -9,7 +9,8 @@ Como forma de aplicar a programação orientada a objetos, eu optei por adiciona
 ## Dados do Projeto
 
 - [Kanban do Github](https://github.com/users/negronnie/projects/1/views/1)
-- [Link do Vídeo Explicativo]() 
+- [Link do Vídeo Explicativo (YouTube)](https://youtu.be/HMrslzOC0NE)
+- [Link do Vídeo Explicativo (Google Drive)](https://drive.google.com/file/d/1Wa82h2ZtYBH7PgEdvPmeIMmrtAJRaTmB/view?usp=sharing)
 - [Excalidraw](https://excalidraw.com/#json=di6Md_eibQXulNPJmvp9F,w2VnQ3ynsmw97KHCDSZngA)
 - [Lista de Issues](https://github.com/negronnie/mini-projeto-avaliativo-skillmatch/issues?q=is%3Aissue)
 - [Lista de Pull Requests](https://github.com/negronnie/mini-projeto-avaliativo-skillmatch/pulls?q=is%3Apr+is%3Aclosed)
